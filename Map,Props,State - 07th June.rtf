@@ -1,0 +1,62 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2870
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica-Bold;\f1\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid1\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid1}
+{\list\listtemplateid2\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid101\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid2}
+{\list\listtemplateid3\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid201\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid3}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}{\listoverride\listid2\listoverridecount0\ls2}{\listoverride\listid3\listoverridecount0\ls3}}
+\paperw11900\paperh16840\margl1440\margr1440\vieww16540\viewh17860\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\b\fs36 \cf0 Map Function :\
+\
+
+\f1\b0\fs26 Map function is used to iterate a list to apply a function on all elements of the list.\
+\
+const ingredients = \{A,B,C\}\
+\
+const ingredientsListItems = ingredients.map((ingredient) => \{\
+			return <li key=\{ingredient\}>\{ingredient\}</li>\
+		\}	\
+	)\
+\
+const ingredientsListItems = ingredients.map(ingredient => (\
+			<li>\{ingredient\}</li>\
+		)\
+	)\
+\
+\pard\tx220\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li720\fi-720\pardirnatural\partightenfactor0
+\ls1\ilvl0\cf0 {\listtext	\uc0\u8226 	}If we use curly braces in the function, return keyword is required.\
+{\listtext	\uc0\u8226 	}If we use parentheses in the function, return is not required and it is implicitly done.\
+{\listtext	\uc0\u8226 	}If we don\'92t specify return, unspecified data will be returned.\
+{\listtext	\uc0\u8226 	}Key helps to identify the list item uniquely so that it will render the DOM which is only required to update.\
+{\listtext	\uc0\u8226 	}It\'92s better to use id\'92s instead of index as keys.\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \
+\
+
+\f0\b\fs36 Props vs State :\
+\
+
+\fs30 Props :
+\fs36 \
+\
+\pard\tx220\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li720\fi-720\pardirnatural\partightenfactor0
+\ls2\ilvl0
+\f1\b0\fs26 \cf0 {\listtext	\uc0\u8226 	}Props are properties or elements like the parameters we pass on to a function to perform a specific task.\
+{\listtext	\uc0\u8226 	}Props need to be immutable. Values passed in props should not be changed.\
+{\listtext	\uc0\u8226 	}Props are passed on to components.\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \
+\
+
+\f0\b\fs30 State :\
+\
+\pard\tx220\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li720\fi-720\pardirnatural\partightenfactor0
+\ls3\ilvl0
+\f1\b0\fs26 \cf0 {\listtext	\uc0\u8226 	}State refers to values that are managed by the component itself similar to local variables inside a function.\
+{\listtext	\uc0\u8226 	}Anytime we have changing values that need to re-render or save to display the changes we use state.\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \
+}
