@@ -1,0 +1,88 @@
+Data Passing between components :
+
+1) What is Lifting state up ?
+
+Sibling components cannot communicate directly in react.Move the shared state to a nearest common parent and pass the state and callback functions down as props.
+This pattern is called lifting state up.
+
+
+2) When would you use Context API ?
+
+When many components need access to the same State and passing the props to multiple intermediate components(State drilling) can be cumbersome.
+Context API can be used to share data more efficiently.
+
+
+3) Can a child modify props ?
+
+No.Props are immutable. A child component should never changes props data.
+
+
+4) How can a child update parent state ?
+
+Pass a callback function from parent to child as a prop. Child will call the function, and parent will update it's own state.
+
+
+5) Why can't child modify parent state directly ?
+
+In react, data passes only in one-direction from parent to child. Making the application predictable and easy to debug.
+
+
+6) What is Prop Drilling ?
+
+If data is passed through every component. App -> Header -> NavBar -> Menu. It is called Prop Drilling.
+
+
+7) What are the drawbacks of Prop Drilling ?
+
+Extra boilerplate
+Difficult maintenance
+Intermediate components may not need the data
+
+
+8) How do you avoid Prop Drilling ?
+
+Context API
+Redux
+Zustand
+Recoil
+
+
+9) What is Context API ?
+
+Context API allows to pass data through a component tree without passing props to each component.
+
+
+10) Distinguish between State and Props ?
+
+Props :
+
+Passed from parent
+External data
+Immutable
+Read-only
+
+State :
+
+Managed by component
+Can be modified
+React re-renders the component and it's descendents when the state is updated.
+State can be updated by setter fucntion.
+
+
+11) What is a controlled Component ?
+
+const [name,setName] = React.useState("")
+
+<input
+  value={name}
+  onChange={(e) => setName(e.target.value)}
+/>
+
+React controls the input value
+
+12) What is a uncontrolled component ?
+
+When the DOM itself manages the component.
+
+<input defaultValue="Joe" /> or const formDate = new FormData(event.currentTarget)
+
