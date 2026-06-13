@@ -1,0 +1,119 @@
+Dynamic Styling
+
+Dynamic styling in React means applying styles based on component state, props, or other runtime conditions. 
+This can be done using conditional className values or inline style objects.
+
+
+1. Dynamic className
+
+function Status({ isOnline }) {
+    return (
+        <h1 className={isOnline ? "online" : "offline"}>
+            User Status
+        </h1>
+    )
+}
+
+.online {
+    color: green;
+}
+
+.offline {
+    color: red;
+}
+
+
+2. Inline Dynamic Styles
+
+function Status({ isOnline }) {
+    return (
+        <h1
+            style={{
+                color: isOnline ? "green" : "red"
+            }}
+        >
+            User Status
+        </h1>
+    )
+}
+
+
+3. Multiple Dynamic Styles
+
+<button
+    style={{
+        backgroundColor: isActive ? "blue" : "gray",
+        color: "white",
+        border: isActive
+            ? "2px solid blue"
+            : "2px solid gray"
+    }}
+>
+    Submit
+</button>
+
+
+4. Using Variables
+
+const buttonStyle = {
+    backgroundColor: isActive ? "blue" : "gray",
+    color: "white"
+}
+
+return (
+    <button style={buttonStyle}>
+        Submit
+    </button>
+)
+
+
+5. Dynamic Styles from State
+
+const [isFavorite, setIsFavorite] = useState(false)
+
+return (
+    <button
+        style={{
+            color: isFavorite ? "gold" : "black"
+        }}
+        onClick={() => setIsFavorite(prev => !prev)}
+    >
+        ★
+    </button>
+)
+
+
+6. Conditional Rendering + Styling
+
+<div
+    className={
+        count > 0
+            ? "has-items"
+            : "empty"
+    }
+>
+    Cart
+</div>
+
+
+Q: Why does React use style={{}}?
+
+Because the style prop expects a JavaScript object.
+
+style={{
+    color: "red",
+    backgroundColor: "blue"
+}}
+
+Outer {} enters JavaScript mode, inner {} creates the object.
+
+
+Q: Why is it backgroundColor and not background-color?
+
+React style objects use JavaScript property names, which follow camelCase.
+
+
+Q: Dynamic className vs inline styles?
+
+className is preferred for larger, reusable styles.
+Inline styles are useful for small dynamic values such as colors, widths, or transforms.
